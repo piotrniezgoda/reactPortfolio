@@ -1,0 +1,18 @@
+@import '../../variables.scss';
+
+.moreInfoBtn {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: $primaryDark;
+  background: $secondary;
+  border: none;
+  padding: 10px 38px;
+  transition: padding 0.4s;
+
+  &:hover {
+    cursor: pointer;
+    background: #fff;
+    padding: 10px 50px;
+    transition: padding 0.4s;
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "pageTitle":  "Portfolio",
+  "pageDescription": "Here you can find my best projects - the chosen ones. If I create something new, you'll be able to find it here.",
+  "project1": {
+    "title": "Weather App",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime, autem nihil temporibus, molestiae iusto nemo reiciendis quae quisquam eum dignissimos quidem, quod quibusdam perferendis necessitatibus sit? Dolor culpa natus dicta laudantium sint ipsa voluptatibus quidem? Perspiciatis quia aut dicta id minus atque accusantium excepturi inventore veritatis cupiditate. Reiciendis, iure beatae.",
+    "viewLink": "",
+    "githubLink": "",
+    "image": "weatherapp.jpg"
+  },
+  "project2": {
+    "title": "News App",
+    "description": "to jest news app",
+    "viewLink": "",
+    "githubLink": "",
+    "image": "../images/newsapp.img"
+  },
+  "project3": {
+    "title": "Treehouse",
+    "description": "to jest treehouse",
+    "viewLink": "",
+    "githubLink": "",
+    "image": "../images/treehouse.img"
+  },
+  "project4": {
+    "title": "Lotto",
+    "description": "to jest Lotto",
+    "viewLink": "",
+    "githubLink": "",
+    "image": "../images/lotto.img"
+  },
+  "project5": {
+    "title": "XEN",
+    "description": "to jest xen",
+    "viewLink": "",
+    "githubLink": "",
+    "image": "../images/xen.img"
+  }
+}

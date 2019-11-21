@@ -1,0 +1,15 @@
+@import '../../variables.scss';
+
+.title {
+  font-weight: 700;
+  font-size: 3.75rem;
+
+  &:first-child {
+    margin-bottom: 10px;
+  }
+
+
+  &Light {
+    color: $secondary;
+  }
+}

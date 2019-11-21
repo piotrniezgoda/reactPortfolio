@@ -1,0 +1,52 @@
+@import '../../variables.scss';
+
+.modal {
+  position: fixed;
+  top: 100px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 1000px;
+  height: 800px;
+  background: #fff;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.7);
+  overflow-Y: scroll;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 58px;
+}
+
+.iconCircle {
+  fill: $secondary;
+}
+
+.closeModal {
+  padding: 5px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+
+.modalTitle {
+  color: $secondary;
+  font-size: 3.75rem;
+  font-weight: 700;
+}
+
+.modalContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modalColumn {
+  flex: 1 1;
+}
+
+
+.modalImage {
+  width: 100%;
+}
