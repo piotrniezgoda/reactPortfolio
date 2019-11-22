@@ -5,8 +5,8 @@
   top: 100px;
   left: 50%;
   transform: translate(-50%, 0%);
-  width: 1000px;
-  height: 800px;
+  max-width: 1000px;
+  min-height: 800px;
   background: #fff;
   box-shadow: 0 0 10px 0 rgba(0,0,0,0.7);
   overflow-Y: scroll;
@@ -44,9 +44,30 @@
 }
 .modalColumn {
   flex: 1 1;
+  padding: 0 10px;
 }
 
 
 .modalImage {
   width: 100%;
+}
+
+.buttonsContainer {
+  margin: 40px 0 0 0;
+}
+
+.modalLink {
+  background: $secondary;
+  padding: 10px 25px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: $primary;
+  margin: 0 5px;
+
+  &:hover, &:focus {
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.45);
+    color: #fff;
+  }
 }

@@ -3,37 +3,30 @@
   "pageDescription": "Here you can find my best projects - the chosen ones. If I create something new, you'll be able to find it here.",
   "project1": {
     "title": "Weather App",
-    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime, autem nihil temporibus, molestiae iusto nemo reiciendis quae quisquam eum dignissimos quidem, quod quibusdam perferendis necessitatibus sit? Dolor culpa natus dicta laudantium sint ipsa voluptatibus quidem? Perspiciatis quia aut dicta id minus atque accusantium excepturi inventore veritatis cupiditate. Reiciendis, iure beatae.",
-    "viewLink": "",
-    "githubLink": "",
+    "description": "Weather app which, was written using Vue. You can check the weather in any city (if only is delivered by OpenWeatherMap API). It has been my first serious project with Vue, which helped me to increase my coding skills, and Vue understanding. The graphic design of the project was designed by me. I wish to thanks HelloRoman for a brilliant tutorial",
+    "viewLink": "https://whatweather.netlify.com/",
+    "githubLink": "https://github.com/piotrniezgoda/weatherApp",
     "image": "weatherapp.jpg"
   },
   "project2": {
     "title": "News App",
-    "description": "to jest news app",
-    "viewLink": "",
-    "githubLink": "",
+    "description": "HotNews app was written with, vanilla JavaScript and Webpack. In this project, I used JS Modules which, allowed me to split my code into parts and make him less vague :). Project design was also designed by me.",
+    "viewLink": "https://piotrniezgoda.github.io/hotnews/",
+    "githubLink": "https://github.com/piotrniezgoda/hotnews",
     "image": "../images/newsapp.img"
   },
   "project3": {
     "title": "Treehouse",
-    "description": "to jest treehouse",
-    "viewLink": "",
-    "githubLink": "",
+    "description": "Treehouse is a free .psd template with a nice modern look. project was created with the help of Gulp - task runner and vanilla JavaScript. Website contains only one page, just like in .pds file.",
+    "viewLink": "https://piotrniezgoda.github.io/treehouse",
+    "githubLink": "https://github.com/piotrniezgoda/treehouse",
     "image": "../images/treehouse.img"
   },
   "project4": {
     "title": "Lotto",
-    "description": "to jest Lotto",
-    "viewLink": "",
-    "githubLink": "",
+    "description": "Lotto is a simulator of a popular lottery at the same name in Poland. In this project I've mainly focused on JavaScript code, I haven't paid too much attention to design. Choose your 6 lucky numbers(1 to 49) and see how many you hit. Numbers are drawn randomly without repeat.",
+    "viewLink": "https://piotrniezgoda.github.io/lottosimulator/",
+    "githubLink": "https://github.com/piotrniezgoda/lottosimulator",
     "image": "../images/lotto.img"
-  },
-  "project5": {
-    "title": "XEN",
-    "description": "to jest xen",
-    "viewLink": "",
-    "githubLink": "",
-    "image": "../images/xen.img"
   }
 }

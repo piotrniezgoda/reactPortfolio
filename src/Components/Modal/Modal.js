@@ -27,6 +27,8 @@ class Modal extends React.Component {
       projectTitle: data[project].title,
       projectDesc: data[project].description,
       projectImage: data[project].image,
+      ghLink: data[project].githubLink,
+      liveLink: data[project].viewLink
     })
   }
 
@@ -38,20 +40,37 @@ class Modal extends React.Component {
     this.setProjectData();
   }
 
-  getPhoto() {
+  getData() {
     switch (this.state.choosedProject) {
       case 'project1':
-        return project1photo;
+        return {
+          photo: project1photo,
+          live: this.state.liveLink,
+          github: this.state.ghLink
+        };
       case 'project2':
-        return project2photo;
+        return {
+          photo: project2photo,
+          live: this.state.liveLink,
+          github: this.state.ghLink
+        };
       case 'project3':
-        return project4photo;
+        return {
+          photo: project4photo,
+          live: this.state.liveLink,
+          github: this.state.ghLink
+        };
       case 'project4':
-        return project3photo;
+        return {
+          photo: project3photo,
+          live: this.state.liveLink,
+          github: this.state.ghLink
+        };
       default:
       return null;
     }
   }
+
 
   render() {
     return(
@@ -70,9 +89,13 @@ class Modal extends React.Component {
               <h2 className={styles.modalTitle}>{this.state.projectTitle}</h2>
             </header>
             <Description description={this.state.projectDesc} mode="dark" />
+            <div className={styles.buttonsContainer}>
+              <a className={styles.modalLink} href={this.getData().live}>Live</a>
+              <a className={styles.modalLink} href={this.getData().github}>GitHub</a>
+            </div>
           </div>
           <div className={styles.modalColumn}>
-            <img className={styles.modalImage} src={this.getPhoto()} alt={this.state.projectTitle} />
+            <img className={styles.modalImage} src={this.getData().photo} alt={this.state.projectTitle} />
           </div>
         </article>
       </div>
