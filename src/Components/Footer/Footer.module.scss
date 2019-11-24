@@ -8,6 +8,9 @@
 }
 
 .footer {
+  padding: 15px 0;
   background: $primary;
-  padding: 10px 0 27px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

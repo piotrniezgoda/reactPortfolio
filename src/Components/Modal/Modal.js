@@ -74,6 +74,7 @@ class Modal extends React.Component {
 
   render() {
     return(
+      <>
       <div className={styles.modal}>
         <button onClick={this.closeModal.bind(this)} className={styles.closeModal}>
         <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46">
@@ -84,7 +85,7 @@ class Modal extends React.Component {
           </svg>
         </button>
         <article className={styles.modalContent}>
-          <div className={styles.modalColumn}>
+          <div className={[styles.modalColumn, styles.modalColumnText].join(' ')}>
             <header className={styles.modalHeader}>
               <h2 className={styles.modalTitle}>{this.state.projectTitle}</h2>
             </header>
@@ -99,6 +100,8 @@ class Modal extends React.Component {
           </div>
         </article>
       </div>
+      <div className={styles.whiteBg}></div>
+      </>
     )
   }
 }

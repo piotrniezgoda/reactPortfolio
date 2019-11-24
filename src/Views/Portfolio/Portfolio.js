@@ -4,6 +4,7 @@ import data from '../../assets/texts/portfolio.json';
 import Title from '../../Components/Title/Title';
 import Description from '../../Components/Description/Description';
 import Modal from '../../Components/Modal/Modal';
+import Footer from '../../Components/Footer/Footer';
 
 class Portfolio extends React.Component {
   constructor(props) {
@@ -15,6 +16,8 @@ class Portfolio extends React.Component {
   }
 
   handleModal(e) {
+    document.body.style.top = `-${window.scrollY}px`;
+    document.body.classList.add(styles.bodyFixed)
     this.setState({
       choosedProject: e.target.name,
       isModalOpen: true
@@ -22,6 +25,10 @@ class Portfolio extends React.Component {
   }
 
    onModalClose(close) {
+    const scrollY = document.body.style.top;
+    document.body.classList.remove(styles.bodyFixed)
+    document.body.style.top = '';
+    window.scrollTo(0, parseInt(scrollY || '0') * -1);
     this.setState({
       isModalOpen: false,
     })
@@ -71,6 +78,7 @@ class Portfolio extends React.Component {
           </div>
            { this.state.isModalOpen && <Modal modalClose={this.onModalClose.bind(this)} projectName={this.state.choosedProject} /> }
         </main>
+        <Footer />
       </>
     );
   }

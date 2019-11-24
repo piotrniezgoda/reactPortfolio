@@ -29,6 +29,12 @@
   max-width: 1320px;
   padding: 39px 20px;
   margin: 0 auto;
+
+
+@media screen and(max-width:960px) {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
 }
 
 .work {
@@ -41,8 +47,15 @@
   background: silver;
   grid-column: 1 / span 2;
 
+  @media screen and(max-width:960px) {
+    grid-column: auto;
+  }
+
   &2{
     grid-column: 2 / span 2;
+    @media screen and(max-width:960px) {
+      grid-column: auto;
+    }
   }
 }
 
@@ -98,6 +111,12 @@
     padding: 10px 50px;
     transition: padding 0.4s;
   }
+}
+
+.bodyFixed {
+  position: fixed;
+  width: calc(100% - 17px);
+
 }
 
 .work1 {
