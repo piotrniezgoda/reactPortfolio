@@ -1,18 +1,23 @@
 @import '../../variables.scss';
 
 .contactParagraph {
-  font-size: 1rem;
+  font-size: 1.4rem;
+  background: $secondary;
+  display: inline-block;
+  padding: 5px;
+  color: #000;
   font-weight: 700;
 }
 
 .header {
   margin-top: 150px;
   text-align: center;
+  padding: 0 20px;
 }
 .main {
   max-width: 500px;
   margin: 0 auto;
-  padding: 100px 5px 0 5px;
+  padding: 100px 20px 0 20px;
 }
 
 .list {
@@ -21,12 +26,15 @@
 
 .listElement {
   font-size: 1.25rem;
-  padding: 4px 0;
+  padding: 5px 0;
+  margin: 20px 0;
+  border-bottom: solid 8px $secondary;
+
 }
 .link {
   text-decoration: none;
   font-weight: 700;
-  color: $secondaryDark;
+  color: $primary;
 
   &:hover {
     color: $primary;

@@ -89,7 +89,9 @@ class Modal extends React.Component {
             <header className={styles.modalHeader}>
               <h2 className={styles.modalTitle}>{this.state.projectTitle}</h2>
             </header>
-            <Description description={this.state.projectDesc} mode="dark" />
+            <div className={styles.descScrollContainer}>
+              <Description description={this.state.projectDesc} mode="dark" />
+            </div>
             <div className={styles.buttonsContainer}>
               <a className={styles.modalLink} href={this.getData().live}>Live</a>
               <a className={styles.modalLink} href={this.getData().github}>GitHub</a>

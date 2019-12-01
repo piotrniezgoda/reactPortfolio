@@ -13,8 +13,8 @@ function Contact() {
     <main className={styles.main}>
       <p className={styles.contactParagraph}>contact ways:</p>
       <ul className={styles.list}>
-        <li className={styles.listElement}>mail: <a className={styles.link} href="mailto:piotr.niezgoda19@hotmail.com">piotr.niezgoda19@hotmail.com</a></li>
-        <li className={styles.listElement}>LinkedIn: <a className={styles.link} href="www.linkedin.com/in/piotrniezgoda">www.linkedin.com/in/piotrniezgoda</a></li>
+        <li className={styles.listElement}><a className={styles.link} href="mailto:piotr.niezgoda19@hotmail.com">piotr.niezgoda19@hotmail.com</a></li>
+        <li className={styles.listElement}><a className={styles.link} href="www.linkedin.com/in/piotrniezgoda">www.linkedin.com/in/piotrniezgoda</a></li>
       </ul>
     </main>
     </>
