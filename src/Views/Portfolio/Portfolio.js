@@ -75,6 +75,14 @@ class Portfolio extends React.Component {
                 </div>
               </div>
             </div>
+            <div className={[styles.work, styles.work6, styles.workBig].join(' ')}>
+              <div className={styles.workOverlay}>
+                <div className={styles.overlayContent}>
+                  <h3 className={styles.projectTitle}>{data.project3.title}</h3>
+                  <button className={styles.moreInfoBtn} name="project5" onClick={this.handleModal.bind(this)}>More info</button>
+                </div>
+              </div>
+            </div>
           </div>
            { this.state.isModalOpen && <Modal modalClose={this.onModalClose.bind(this)} projectName={this.state.choosedProject} /> }
         </main>

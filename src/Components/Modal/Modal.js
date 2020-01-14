@@ -7,6 +7,7 @@ import project1photo from '../../assets/images/weatherapp.jpg';
 import project2photo from '../../assets/images/newsapp.jpg';
 import project3photo from '../../assets/images/lotto.jpg';
 import project4photo from '../../assets/images/treehouse.jpg';
+import project5photo from '../../assets/images/soundit.JPG';
 
 class Modal extends React.Component {
   constructor(props) {
@@ -63,6 +64,12 @@ class Modal extends React.Component {
       case 'project4':
         return {
           photo: project3photo,
+          live: this.state.liveLink,
+          github: this.state.ghLink
+        };
+      case 'project5':
+        return {
+          photo: project5photo,
           live: this.state.liveLink,
           github: this.state.ghLink
         };

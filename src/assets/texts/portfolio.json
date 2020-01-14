@@ -28,5 +28,11 @@
     "viewLink": "https://piotrniezgoda.github.io/lottosimulator/",
     "githubLink": "https://github.com/piotrniezgoda/lottosimulator",
     "image": "../images/lotto.img"
+  },
+  "project5": {
+    "title": "SoundIT",
+    "description": "SountIT is simple app piano simulator created with react. Currently, it's the very early alpha version - first working build. You can play easy melodies using your's mouse or keyboard where sound name is key on the keyboard - for example, sound 'A' is 'A' key on the keyboard, sound 'F' is 'F' key on keyboard etc. Currently is available only one octave.",
+    "viewLink": "https://soundit.netlify.com/",
+    "githubLink": "https://github.com/piotrniezgoda/soundIt"
   }
 }
