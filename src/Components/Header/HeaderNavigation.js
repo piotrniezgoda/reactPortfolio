@@ -1,6 +1,6 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom'
-import styles from './HeaderNavigation.module.scss';
+import { Link } from 'gatsby'
+import styles from './Headernavigation.module.scss';
 import hamburgerIcon from '../../assets/icons/ic_menu.svg';
 import { CSSTransition } from "react-transition-group";
 import debounce from 'lodash.debounce';
@@ -71,9 +71,9 @@ resize(width) {
                 timeout={400}
                 appear>
               <ul id="menuList" className={[styles.navbar__menu, this.state.isMenuOpen ? "navbarMenuActive" : ''].join(' ')}>
-              <li className={styles.menu__item}><NavLink exact activeClassName={styles.menuActiveLink} className={styles.menu__link} onClick={this.menuClose} to="/">About</NavLink></li>
-              <li className={styles.menu__item}><NavLink activeClassName={styles.menuActiveLink} className={styles.menu__link} onClick={this.menuClose} to="/portfolio">Portfolio</NavLink></li>
-              <li className={styles.menu__item}><NavLink activeClassName={styles.menuActiveLink} className={styles.menu__link} onClick={this.menuClose} to="/contact">Contact</NavLink></li>
+              <li className={styles.menu__item}><Link activeClassName={styles.menuActiveLink} className={styles.menu__link} onClick={this.menuClose} to="/">O Mnie</Link></li>
+              <li className={styles.menu__item}><Link activeClassName={styles.menuActiveLink} className={styles.menu__link} onClick={this.menuClose} to="/portfolio">Portfolio</Link></li>
+              <li className={styles.menu__item}><Link activeClassName={styles.menuActiveLink} className={styles.menu__link} onClick={this.menuClose} to="/contact">Kontakt</Link></li>
             </ul>
             </CSSTransition>
             )}

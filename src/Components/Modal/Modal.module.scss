@@ -4,7 +4,7 @@
   position: fixed;
   top: 100px;
   left: 50%;
-  transform: translate(-50%, 0%);
+  transform: translate(-50%);
   width: 1000px;
   max-width: 100%;
   min-height: 700px;
@@ -138,4 +138,9 @@
   width: 100%;
   height: 100vh;
   background: rgba(255,255,255,0.75);
+}
+
+.bodyFixed {
+  position: fixed;
+  width: calc(100% - 17px);
 }

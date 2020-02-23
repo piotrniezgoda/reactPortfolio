@@ -1,89 +1,25 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import styles from './Modal.module.scss';
-import data from '../../assets/texts/portfolio.json';
 import Description from '../Description/Description';
 
-import project1photo from '../../assets/images/weatherapp.jpg';
-import project2photo from '../../assets/images/newsapp.jpg';
-import project3photo from '../../assets/images/lotto.jpg';
-import project4photo from '../../assets/images/treehouse.jpg';
-import project5photo from '../../assets/images/soundit.JPG';
 
-class Modal extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      choosedProject: props.projectName,
-      projectTitle: '',
-      projectDesc: '',
-      ghLink: '',
-      liveLink: '',
-      projectImage: '',
-    }
-  }
+  function Modal({modalStatus, modalData}) {
 
-  setProjectData() {
-    const project = this.state.choosedProject;
-    this.setState({
-      projectTitle: data[project].title,
-      projectDesc: data[project].description,
-      projectImage: data[project].image,
-      ghLink: data[project].githubLink,
-      liveLink: data[project].viewLink
+    useEffect(() => {
+      document.body.style.top = `-${window.scrollY}px`;
+      document.body.classList.add(styles.bodyFixed);
+      return () => {
+        const scrollY = document.body.style.top;
+        document.body.classList.remove(styles.bodyFixed)
+        document.body.style.top = '';
+        window.scrollTo(0, parseInt(scrollY || '0') * -1);
+      }
     })
-  }
 
-  closeModal() {
-    this.props.modalClose();
-  }
-
-  componentDidMount() {
-    this.setProjectData();
-  }
-
-  getData() {
-    switch (this.state.choosedProject) {
-      case 'project1':
-        return {
-          photo: project1photo,
-          live: this.state.liveLink,
-          github: this.state.ghLink
-        };
-      case 'project2':
-        return {
-          photo: project2photo,
-          live: this.state.liveLink,
-          github: this.state.ghLink
-        };
-      case 'project3':
-        return {
-          photo: project4photo,
-          live: this.state.liveLink,
-          github: this.state.ghLink
-        };
-      case 'project4':
-        return {
-          photo: project3photo,
-          live: this.state.liveLink,
-          github: this.state.ghLink
-        };
-      case 'project5':
-        return {
-          photo: project5photo,
-          live: this.state.liveLink,
-          github: this.state.ghLink
-        };
-      default:
-      return null;
-    }
-  }
-
-
-  render() {
     return(
       <>
       <div className={styles.modal}>
-        <button onClick={this.closeModal.bind(this)} className={styles.closeModal}>
+        <button onClick={() => modalStatus(false)} className={styles.closeModal}>
         <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46">
             <g id="Group_5" data-name="Group 5" transform="translate(-1353 -366)">
             <circle className={styles.iconCircle} id="Ellipse_49" data-name="Ellipse 49" cx="23" cy="23" r="23" transform="translate(1353 366)"/>
@@ -94,25 +30,24 @@ class Modal extends React.Component {
         <article className={styles.modalContent}>
           <div className={[styles.modalColumn, styles.modalColumnText].join(' ')}>
             <header className={styles.modalHeader}>
-              <h2 className={styles.modalTitle}>{this.state.projectTitle}</h2>
+              <h2 className={styles.modalTitle}>{modalData.title}</h2>
             </header>
             <div className={styles.descScrollContainer}>
-              <Description description={this.state.projectDesc} mode="dark" />
+              <Description description={modalData.description} mode="dark" />
             </div>
             <div className={styles.buttonsContainer}>
-              <a className={styles.modalLink} href={this.getData().live}>Live</a>
-              <a className={styles.modalLink} href={this.getData().github}>GitHub</a>
+              <a className={styles.modalLink} href={modalData.liveLink}>Live</a>
+              <a className={styles.modalLink} href={modalData.githubLink}>GitHub</a>
             </div>
           </div>
           <div className={styles.modalColumn}>
-            <img className={styles.modalImage} src={this.getData().photo} alt={this.state.projectTitle} />
+            <img className={styles.modalImage} src={modalData.imageURL} alt={modalData.title} />
           </div>
         </article>
       </div>
       <div className={styles.whiteBg}></div>
       </>
     )
-  }
 }
 
 export default Modal;

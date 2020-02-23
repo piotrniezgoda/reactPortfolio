@@ -56,6 +56,10 @@ table {
 body, html {
 	font-family: 'Roboto', sans-serif;
 }
+html {
+	min-height: 100%;
+	position: relative;
+}
 
 @media (min-width: 1930px) {
 	body {
