@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import Head from '../Components/HelmetHead/Head';
+import Head from '../components/HelmetHead/Head';
 import styles from './portfolio.module.scss';
 import Layout from '../components/Layout/Layout';
 import PortfolioWork from '../components/portfolioWork/portfolioWork';

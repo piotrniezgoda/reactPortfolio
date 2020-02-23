@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import Head from '../Components/HelmetHead/Head';
+import Head from '../components/HelmetHead/Head';
 import ButtonLink from '../components/ButtonLink/ButtonLink';
 import styles from './Home.module.scss';
 import MyPhoto from '../components/MyPhoto/MyPhoto';
